@@ -5,6 +5,7 @@
 expression {
   Identifier |
   String |
+  Integer |
   Boolean |
   Application { "(" expression* ")" }
 }
@@ -14,11 +15,15 @@ expression {
 
   String { '"' (!["\\] | "\\" _)* '"' }
 
+  Integer { $[0-9]+ }
+
   Boolean { "#t" | "#f" }
 
   space { $[ \t\n\r]+ }
 
   "(" ")"
+
+  @precedence { Integer, Identifier }
 }
 
 @detectDelim
