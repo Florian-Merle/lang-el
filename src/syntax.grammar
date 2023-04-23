@@ -7,6 +7,8 @@ expression {
   String |
   Integer |
   Boolean |
+  AndOperator |
+  OrOperator |
   Application { "(" expression* ")" }
 }
 
@@ -20,6 +22,10 @@ expression {
   Boolean { "true" | "false" }
 
   space { $[ \t\n\r]+ }
+
+  AndOperator { "&&" }
+
+  OrOperator { "||" }
 
   "(" ")"
 

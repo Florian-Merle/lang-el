@@ -16,7 +16,9 @@ export const ELLanguage = LRLanguage.define({
         Boolean: t.bool,
         String: t.string,
         Integer: t.integer,
-        "( )": t.paren
+        "( )": t.paren,
+        AndOperator: t.operator,
+        OrOperator: t.operator,
       })
     ]
   }),
