@@ -15,13 +15,11 @@ export const ELLanguage = LRLanguage.define({
         Identifier: t.variableName,
         Boolean: t.bool,
         String: t.string,
-        LineComment: t.lineComment,
         "( )": t.paren
       })
     ]
   }),
   languageData: {
-    commentTokens: {line: ";"}
   }
 })
 
