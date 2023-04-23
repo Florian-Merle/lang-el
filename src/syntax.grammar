@@ -17,12 +17,13 @@ expression {
 
   Integer { $[0-9]+ }
 
-  Boolean { "#t" | "#f" }
+  Boolean { "true" | "false" }
 
   space { $[ \t\n\r]+ }
 
   "(" ")"
 
+  @precedence { Boolean, Identifier }
   @precedence { Integer, Identifier }
 }
 
